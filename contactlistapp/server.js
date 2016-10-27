@@ -23,6 +23,10 @@ app.post('/contactlist', function(req, res) {
   });
 });
 
+app.delete('/contactlist/:id', function(req, res){
+  var id = req.params.id;
+  console.log(id);
+});
 /*
 app.get('/', function (req, res) {
   res.send("Hello world from server.js");
