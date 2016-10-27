@@ -27,6 +27,13 @@ $scope.remove = function(id) {
   });
 };
 
+$scope.edit = function(id) {
+  console.log(id);
+  $http.get('/contactlist/' + id).success(function(response) {
+    $scope.contact = response;
+  });
+};
+
     //$scope.contactlist = contactlist;
 
 

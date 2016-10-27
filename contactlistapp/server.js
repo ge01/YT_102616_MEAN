@@ -30,6 +30,15 @@ app.delete('/contactlist/:id', function(req, res){
     res.json(doc);
   });
 });
+
+app.get('/contactlist/:id', function(req, res) {
+  var id = req.params.id;
+  console.log(id);
+  db.contactlist.findOne({_id: mongojs.ObjectId(id)}, function(err, doc) {
+    res.json(doc);
+  });
+});
+
 /*
 app.get('/', function (req, res) {
   res.send("Hello world from server.js");
