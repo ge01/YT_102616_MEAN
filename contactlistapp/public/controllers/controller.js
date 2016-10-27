@@ -7,6 +7,10 @@ $http.get('/contactlist').success(function(response) {
   $scope.contactlist = response;
 });
 
+$scope.addContact = function() {
+  console.log($scope.contact);
+};
+
 
     //$scope.contactlist = contactlist;
 
